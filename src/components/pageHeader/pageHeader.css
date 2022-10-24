@@ -7,6 +7,7 @@
   background: linear-gradient(#fff, #e7e8eb);
   padding: 5px;
   border-radius: 3px;
+  max-height: 112px;
 }
 
 .page__header img {
