@@ -1,0 +1,14 @@
+.page__header {
+  border: 1px solid #e0e1e3;
+  border-radius: 3px;
+}
+
+.page__header-wrapper {
+  background: linear-gradient(#fff, #e7e8eb);
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.page__header img {
+  max-width: 100%;
+}

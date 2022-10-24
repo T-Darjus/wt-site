@@ -1,0 +1,13 @@
+.quotes .heading {
+  margin-bottom: 15px;
+}
+.quote__text {
+  display: inline-block;
+  font-size: 14px;
+  font-style: italic;
+
+  line-height: 1.5;
+}
+.quote__author {
+  font-size: 14px;
+}

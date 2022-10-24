@@ -1,0 +1,35 @@
+.mb12 {
+  margin-bottom: 12px;
+}
+.mb15 {
+  margin-bottom: 12px;
+}
+.services__card-heading {
+  margin-bottom: 12px;
+}
+.services__card-textbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.services__card-description {
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+
+.mt15 {
+  margin-top: 15px;
+}
+
+.fleet__card {
+  margin-top: 30px;
+}
+.fleet__card img {
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .services__fleet {
+    padding-bottom: 15px;
+  }
+}

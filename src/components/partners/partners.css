@@ -1,0 +1,16 @@
+.partners__container {
+  margin-top: 30px;
+}
+.partners__list {
+  overflow: hidden;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-start; */
+}
+
+.partners__list img {
+  width: 140px;
+}
+.partners__list-item {
+}

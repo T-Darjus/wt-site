@@ -1,0 +1,15 @@
+.about__card {
+  margin-bottom: 16px;
+}
+.about__card-heading {
+  margin-bottom: 15px;
+}
+.about__card-textbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.about__card-description {
+  font-size: 14px;
+  padding-bottom: 7px;
+}
