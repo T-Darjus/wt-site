@@ -7,9 +7,14 @@
   background: linear-gradient(#fff, #e7e8eb);
   padding: 5px;
   border-radius: 3px;
-  max-height: 112px;
 }
 
 .page__header img {
   max-width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .page__header-wrapper {
+    padding: 3px;
+  }
 }
