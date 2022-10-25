@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-
+import partnersText from "./partnersText";
 import "./partners.css";
 
-const Partners = () => {
+const Partners = ({ language }) => {
   const [moveLeft, setMoveLeft] = useState(0);
+  let textLang = partnersText[language];
 
   if (moveLeft > 840) {
     setMoveLeft(0);
@@ -21,7 +22,7 @@ const Partners = () => {
     <div className="partners">
       <div className="main-container">
         <div style={{ overflow: "hidden" }} className="partners__container">
-          <h3 className="heading">We collaborate with</h3>
+          <h3 className="heading">{textLang.heading}</h3>
           <ul
             style={{
               marginLeft: `-${moveLeft}px`,

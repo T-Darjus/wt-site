@@ -5,6 +5,7 @@ import AboutUs from "./pages/AboutUs";
 import PageServices from "./pages/PageServices";
 import PageRoutes from "./pages/PageRoutes";
 import PageContact from "./pages/PageContact";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Routes as RoutWraper,
@@ -13,15 +14,31 @@ import {
 import ScrollToTop from "react-scroll-to-top";
 
 function App() {
+  const [language, setLanguage] = useState(0);
   return (
     <Router>
-      <Navbar />
+      <div className="languages">
+        <div className="main-container">
+          <div className="languages__container">
+            <button onClick={() => setLanguage(0)}>EN</button>
+            <button onClick={() => setLanguage(1)}>LT</button>
+            <button onClick={() => setLanguage(2)}>PL</button>
+          </div>
+        </div>
+      </div>
+      <Navbar language={language} />
       <RoutWraper>
-        <Route path={"/"} exact element={<Home />} />
-        <Route path={"/about"} element={<AboutUs />} />
-        <Route path={"/services"} element={<PageServices />} />
-        <Route path={"/routes"} element={<PageRoutes />} />
-        <Route path={"/contact"} element={<PageContact />} />
+        <Route path={"/"} exact element={<Home language={language} />} />
+        <Route path={"/about"} element={<AboutUs language={language} />} />
+        <Route
+          path={"/services"}
+          element={<PageServices language={language} />}
+        />
+        <Route path={"/routes"} element={<PageRoutes language={language} />} />
+        <Route
+          path={"/contact"}
+          element={<PageContact language={language} />}
+        />
       </RoutWraper>
       <ScrollToTop
         smooth
@@ -45,7 +62,7 @@ function App() {
           </svg>
         }
       />
-      <Footer />
+      <Footer language={language} />
     </Router>
   );
 }

@@ -4,15 +4,15 @@ import Contact from "../components/contact/Contact";
 import PageHeader from "../components/pageHeader/PageHeader";
 import Panel from "../components/panel/Panel";
 
-const PageContact = () => {
+const PageContact = ({ language }) => {
   return (
     <div className="contact">
       <div className="main-container">
         <PageHeader src={img} alt={"picture of glass skyscraper"} />
         <div className="content">
-          <Contact />
+          <Contact language={language} />
           <aside>
-            <Panel />
+            <Panel language={language} />
           </aside>
         </div>
       </div>

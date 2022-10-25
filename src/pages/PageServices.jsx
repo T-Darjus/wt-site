@@ -4,15 +4,15 @@ import Services from "../components/services/Services";
 import PageHeader from "../components/pageHeader/PageHeader";
 import Panel from "../components/panel/Panel";
 
-const PageServices = () => {
+const PageServices = ({ language }) => {
   return (
     <div className="services">
       <div className="main-container">
         <PageHeader src={img} alt={"picture of blue sky"} />
         <div className="content">
-          <Services />
+          <Services language={language} />
           <aside>
-            <Panel />
+            <Panel language={language} />
           </aside>
         </div>
       </div>

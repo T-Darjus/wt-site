@@ -1,11 +1,13 @@
 import "./navbar.css";
+import navbarText from "./navbarText";
 import menu from "../assets/menu-icon.svg";
 import close from "../assets/menu-close.svg";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ language }) => {
   const [isOpen, setIsOpen] = useState(false);
+  let navLang = navbarText[language];
 
   return (
     <nav className="navigation">
@@ -26,7 +28,7 @@ const Navbar = () => {
                   setIsOpen(!isOpen);
                 }}
               >
-                Home
+                {navLang.home}
               </NavLink>
             </li>
             <li className="navigation__link">
@@ -39,7 +41,7 @@ const Navbar = () => {
                   setIsOpen(!isOpen);
                 }}
               >
-                About Us
+                {navLang.about}
               </NavLink>
             </li>
             <li className="navigation__link">
@@ -52,7 +54,7 @@ const Navbar = () => {
                   setIsOpen(!isOpen);
                 }}
               >
-                Services
+                {navLang.services}
               </NavLink>
             </li>
             <li className="navigation__link">
@@ -65,7 +67,7 @@ const Navbar = () => {
                   setIsOpen(!isOpen);
                 }}
               >
-                Routes
+                {navLang.routes}
               </NavLink>
             </li>
             <li className="navigation__link">
@@ -78,7 +80,7 @@ const Navbar = () => {
                   setIsOpen(!isOpen);
                 }}
               >
-                Contact
+                {navLang.contact}
               </NavLink>
             </li>
           </ul>

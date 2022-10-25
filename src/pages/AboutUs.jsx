@@ -4,15 +4,15 @@ import About from "../components/about/About";
 import PageHeader from "../components/pageHeader/PageHeader";
 import Panel from "../components/panel/Panel";
 
-const AboutUs = () => {
+const AboutUs = ({ language }) => {
   return (
     <div className="about">
       <div className="main-container">
         <PageHeader src={img} alt={"picture of glass skyscraper"} />
         <div className="content">
-          <About />
+          <About language={language} />
           <aside>
-            <Panel />
+            <Panel language={language} />
           </aside>
         </div>
       </div>

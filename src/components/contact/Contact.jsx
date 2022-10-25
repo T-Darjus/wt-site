@@ -1,10 +1,13 @@
 import React from "react";
 import "./contact.css";
+import contactText from "./contactText";
 
-const Contact = () => {
+const Contact = ({ language }) => {
+  let textLang = contactText[language];
+
   return (
     <div className="content__box">
-      <h3 className="contact__heading heading">Contact</h3>
+      <h3 className="contact__heading heading">{textLang.heading}</h3>
       <p className="contact__phone">
         Tel. +370 699 97679 <strong>|</strong> Email:{" "}
         <a title="info@wegotransport.com" href="mailto:info@wegotransport.com">
@@ -12,17 +15,14 @@ const Contact = () => {
         </a>
       </p>
       <div className="contact__textbox">
-        <p className="contact__text">Wego transport, UAB</p>
-        <p className="contact__text">
-          Address: Laisves pr. 77E, LT-06155 Vilnius
-        </p>
-        <p className="contact__text">Company code: 302442803</p>
-        <p className="contact__text">
-          VAT code: LT100004943510Bank: SEB BANKAS
-        </p>
-        <p className="contact__text">Acc. No.: LT377044060007323417</p>
-        <p className="contact__text">Bank code: 70440</p>
-        <p className="contact__text">Swift code: CBVILT2X</p>
+        <p className="contact__text">{textLang.wego}</p>
+        <p className="contact__text">{textLang.address}</p>
+        <p className="contact__text">{textLang.code}</p>
+        <p className="contact__text">{textLang.vat}</p>
+        <p className="contact__text">{textLang.bank}</p>
+        <p className="contact__text">{textLang.acc}</p>
+        <p className="contact__text">{textLang.bankCode}</p>
+        <p className="contact__text">{textLang.swift}</p>
       </div>
     </div>
   );

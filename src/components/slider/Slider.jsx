@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./slider.css";
+import sliderText from "./sliderText";
 
-const Slider = () => {
+const Slider = ({ language }) => {
   const [index, setIndex] = useState(1);
   const [card1, setCard1] = useState("card--top");
   const [card2, setCard2] = useState("card--last");
   const [card3, setCard3] = useState("card--last");
+
+  let textLang = sliderText[language];
 
   const prevSlide = () => {
     if (index - 1 === 0) {
@@ -63,37 +66,28 @@ const Slider = () => {
                 alt="road with cars at night"
               />
               <div className="slider__card-textbox">
-                <h4 className="slider__card-heading">Innovation</h4>
-                <p className="slider__card-text">
-                  We are focused, we seek and develop long term relationships
-                  with our customers, partners, employees, and this is the way
-                  of our business development.
-                </p>
+                <h4 className="slider__card-heading">
+                  {textLang.headingInnovation}
+                </h4>
+                <p className="slider__card-text">{textLang.textInnovation}</p>
               </div>
             </div>
             <div className={`slider__card ${card2}`}>
               <img src="img/home/slides/partnership.jpg" alt="sand clock" />
               <div className="slider__card-textbox">
-                <h4 className="slider__card-heading">Partnership</h4>
-                <p className="slider__card-text">
-                  We are focused, we seek and develop long term relationships
-                  with our customers, partners, employees, and this is the way
-                  of our business development.
-                </p>
+                <h4 className="slider__card-heading">
+                  {textLang.headingPartnership}
+                </h4>
+                <p className="slider__card-text">{textLang.textPartnership}</p>
               </div>
             </div>
             <div className={`slider__card ${card3}`}>
               <img src="img/home/slides/quality.jpg" alt="tree in a bucket" />
               <div className="slider__card-textbox">
                 <h4 className="slider__card-heading">
-                  Quality and environment
+                  {textLang.headingQuality}
                 </h4>
-                <p className="slider__card-text">
-                  We implement and continuously improve the integrated quality
-                  and environmental management system in accordance with ISO
-                  9001:2008 and ISO 14001:2004. We focus on daily operations
-                  with minimal environmental impact.
-                </p>
+                <p className="slider__card-text">{textLang.textQuality}</p>
               </div>
             </div>
             <div className="slider__nav">
